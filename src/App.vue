@@ -9,8 +9,8 @@
 import { reactive } from "vue";
 export default {
   setup() {
-    const userName = ref("John");
-    const age = ref(27);
+    // const userName = ref("John");
+    // const age = ref(27);
     const user = reactive({
       name: "Ali",
       age: 27
