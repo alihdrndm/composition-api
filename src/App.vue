@@ -2,6 +2,10 @@
   <section class="container">
     <h2>{{ user.name }}</h2>
     <h2>{{ user.age }}</h2>
+    <hr />
+    <button @click="changeName">Change Name</button>
+    <hr />
+    <button @click="changeAge">Change Age</button>
   </section>
 </template>
 
@@ -16,12 +20,20 @@ export default {
       age: 27
     });
 
-    setTimeout(() => {
-      user.name = "Ali Haider Nadeem";
-      user.age = 28;
-    }, 2000);
+    function changeAge() {
+      user.age = 32;
+    }
 
-    return { user };
+    const changeName = () => {
+      user.name = "Ali Haider Nadeem";
+    };
+
+    // setTimeout(() => {
+    //   user.name = "Ali Haider Nadeem";
+    //   user.age = 28;
+    // }, 2000);
+
+    return { user, changeAge, changeName };
   }
 };
 </script>
