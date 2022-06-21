@@ -6,19 +6,19 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { reactive } from "vue";
 export default {
   setup() {
     // const userName = ref("John");
     // const age = ref(27);
-    const user = ref({
+    const user = reactive({
       name: "Ali",
       age: 27
     });
 
     setTimeout(() => {
-      user.value.name = "Ali Haider Nadeem";
-      user.value.age = 28;
+      user.name = "Ali Haider Nadeem";
+      user.age = 28;
     }, 2000);
 
     return { user };
