@@ -12,7 +12,7 @@ export default {
     setTimeout(() => {
       userName.value = "Ali Haider Nadeem";
     }, 2000);
-    return { userName };
+    return { userName: userName };
   }
 };
 </script>
